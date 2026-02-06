@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: travel-listing-model
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
