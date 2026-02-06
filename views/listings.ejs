@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listing</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="featured">
+        <h1 id="featuredHeading">All Listings
+            <a href="/listings/new" class="newListing"> <i class="fa-solid fa-plus"></i> </a>
+        </h1>
+        <div class="card-row">
+        <% for( let i = 0; i < data.length; i++ ) { %>
+             <!--GET method doesnt require <form> as it is the default method which can also work in anchor tag-->
+            <div class="card">
+                <!-- Image clickable -->
+                <a href="/listings/<%=data[i].id%>">
+                    <img src="<%=data[i].image.url%>" class="cardImage">
+                </a>
+
+                <div class="cardContent">
+                    <h4 class="cardTitle"><%=data[i].title%></h4>
+                    <pre><%=data[i].location%>, <%=data[i].country%></pre>
+                    <hr style="border: none; border-top: 1px solid #7f7f7f;">
+                    <p class="cardDescription"><%=data[i].description%></p>
+
+                    <!-- Button clickable -->
+                    <a href="/listings/<%=data[i].id%>">
+                        <button class="cardButton">See More</button>
+                    </a>
+                </div>
+
+                <form method="post" action="/listings/<%=data[i].id%>?_method=delete">
+                    <button class="delBtn">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </form>
+            </div>
+        <% } %>
+        </div>
+    </div>
+</body>
+</html>

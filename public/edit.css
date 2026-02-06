@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    padding: 10px;
+    background-color: #071117;
+    width: 800px;
+    height: 100vh;
+}
+
+h1{
+    padding: 10px;
+    margin: 10px;
+    color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+textarea {
+    height: 50px;
+    margin: 12px;
+    display: flex;
+    align-items: center;
+}
+
+
+button {
+    height: 40px;
+    width: 100px;
+    margin: 10px;
+    background-color: green;
+    color: white;
+    border: 1px solid green;
+    border-radius: 5%;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color:rgb(10, 150, 10);
+}

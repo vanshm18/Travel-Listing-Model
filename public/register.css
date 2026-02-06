@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-image: url(image\ \(1\).png);
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.019);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  border: 3px solid rgb(255, 255, 255);
+}
+
+.card h2 {
+  margin-bottom: 10px;
+  font-size: 28px;
+  color: #333;
+}
+
+.card p {
+  margin-bottom: 20px;
+  color: #777;
+}
+
+.login input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.login button {
+  width: 100%;
+  padding: 12px;
+  background-color: #12b715;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login button:hover {
+  background-color: #0d990d;
+}
+
+.toggle-text {
+  margin-top: 15px;
+  font-size: 14px;
+  color: white;
+}
+
+.toggle-text a {
+  color: #98b9e7;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.toggle-text a:hover {
+  text-decoration: underline;  
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.logo {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: 100px;
+  height: 70px;
+  background-image: url(Logo_2.png);
+  background-size: cover;
+}

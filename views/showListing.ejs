@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #071117; color: white;">
+    <h2><%=post.title%></h2>
+    <h4><%=post.location%>  <%=post.country%></h4>
+    <img src="<%=post.image.url%>" width="700px" height="400px">
+    <p><%=post.description%></p>
+    <p> Price :  &#8377 <%=post.price.toLocaleString("en-IN")%></p>         <!-- <p> &#8377 (for rupeer symbol)   and   post.price.toLocaleString("en-IN").  it is used for commas in numbers according to country.-->
+    <a href="/listings/<%=post.id%>/edit">
+        <button class="edit" style="border: none; height: 30px; width: 70px; border-radius: 10%; cursor: pointer;">
+            Edit Post</button>
+    </a>
+</body>
+</html>

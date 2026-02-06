@@ -1,0 +1,162 @@
+body {
+    background-color: #071117;
+}
+
+.featured {
+    padding: 30px 50px;
+    height: auto;
+}
+
+.newListing {
+    display: inline-block;
+    margin-left: 75px;
+    text-decoration: none;
+    height: 40px;
+    width: 40px;
+    border: 1px solid green;
+    background-color: green;
+    border-radius: 50%;
+}
+
+.newListing:hover {
+    background-color: rgb(7, 203, 7);
+}
+
+.fa-plus {
+    padding-left: 6px;
+    padding-top: 4px;
+    color: white;
+}
+
+#featuredHeading {
+    font-weight: normal;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    color: #f2f2f2;
+}
+
+.card-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+    gap: 20px; /* spacing between cards */
+}
+
+
+.card {
+    border: none;
+    border-radius: 12px;
+    width: 300px;
+    height: 380px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* pushes content & button apart */
+    height: 100%; /* make all cards equal height */
+}
+
+.cardImage {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.cardContent {
+    padding: 16px;
+    position: relative;
+    background-color: #ffffff;
+    flex-grow: 1;
+}
+
+.cardTitle {
+    margin-top: 5px;
+    color: #283139;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.cardDescription {
+    color: #2d2c2c;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 60px;
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+    transform: translateY(20px);
+    max-height: 110px;
+}
+
+.cardButton {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #0099db, #006ab0);
+    border: none;
+    border-radius: 25px;
+    width: 150px;
+    height: 45px;
+    font-size: 16px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    z-index: 2;
+    box-shadow: 0 8px 20px rgba(0, 106, 176, 0.3);
+    transition: all 0.3s ease;
+    margin-top: auto;
+}
+
+.cardButton:hover {
+    background: linear-gradient(135deg, #00b4ff, #0077c2);
+    box-shadow: 0 10px 24px rgba(0, 106, 176, 0.5);
+    transform: translateX(-50%) scale(1.05);
+}
+
+
+.cardContent::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(to top, white, transparent);
+    z-index: 1;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.delBtn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 3;
+    height: 35px;
+    width: 35px;
+    border: 0.5px solid black;
+    background-color: white;
+    border-radius: 5%;
+    cursor: pointer;
+}
+
+.fa-trash {
+    scale: 1.4;
+    color: red;
+}
+
+.delBtn:hover {
+    background-color: red;
+    border: none;
+    
+}
+.delBtn:hover .fa-trash {
+    color: white;
+}

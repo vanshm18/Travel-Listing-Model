@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/edit.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Edit post</h1>
+        <form method="post" action="/listings/<%=edit.id%>?_method=PUT">             <!-- FIRST npm i method-override to use put and delete requests -->
+            <textarea name="title" rows="2" cols="80"><%=edit.title%></textarea>
+            <textarea name="image" rows="2" cols="80"><%=edit.image.url%></textarea>
+            <textarea name="description" rows="2" cols="80"><%=edit.description%></textarea>
+            <textarea name="price" rows="2" cols="80"><%=edit.price%></textarea>
+            <textarea name="location" rows="2" cols="80"><%=edit.location%></textarea>
+            <textarea name="country" rows="2" cols="80"><%=edit.country%></textarea>
+            <button>Ok</button>
+        </form>
+    </div>
+</body>
+</html>
