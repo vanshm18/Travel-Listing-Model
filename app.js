@@ -21,7 +21,8 @@ main()
     })
 
 async function main() {
-    await mongoose.connect('mongodb://127.0.0.1:27017/Wanderlust');
+    const dbUrl = process.env.MONGO_URL || 'mongodb://127.0.0.1:27017/Wanderlust';
+    await mongoose.connect(dbUrl);
 }
 
 app.use(methodOverride('_method'));
